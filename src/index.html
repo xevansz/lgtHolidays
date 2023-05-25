@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="MatthewsZen" />
+    <meta name="author" content="MahiReddy3001" />
+    <meta name="description" content="Redesigning Travel Trends" />
+    <meta
+      name="keywords"
+      content="Tourism,Tours,Tour,Travels,Lgt,Holiday,Trip,Trips,Journey,Picnic,Outing,Visit,Explore,Internations"
+    />
+    <meta charset="UTF-8" />
+    <title>LGT Holidays | Redesigning Travel Trends</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <!-- links -->
+    <link rel="icon" href="assets/logo.jpg" type="image/jpg" />
+    <link rel="shortcut icon" href="assets/logo.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../site.webmanifest" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar glass" style="height: 70px">
+      <span style="padding-top: 40px"
+        ><a href="#home"
+          ><img
+            class="img2"
+            src="assets/logo.png"
+            style="margin: -45px -40px"
+          />
+          <h1 class="logo">LGT Holidays</h1>
+        </a></span
+      >
+      <ul class="nav-links">
+        <li><a href="#home" id="pri" class="active cir_border">Home</a></li>
+        <li><a href="#dest" id="sec" class="cir_border">Destinations</a></li>
+        <li>
+          <a href="#contribution" id="quint" class="cir_border">Our Company</a>
+        </li>
+        <li><a href="#about" id="quad" class="cir_border">About</a></li>
+        <div class="search-container">
+          <input
+            type="text"
+            name="search"
+            placeholder=" find your dream destination..."
+            class="search-input"
+          />
+          <a href="#" class="search-btn">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+      </ul>
+      <img src="assets/menu-btn.png" alt="" class="menu-btn" />
+    </nav>
+    <!-- navbar -->
+    
+   <!-- header -->
+    <header id="home">
+       <div class="header-content">
+          <h2 id="quote">Zoom the World around!</h2>
+          <div class="line"></div>
+          <div class="main">
+             <h1> Collect Moments
+              <div class="roller">
+               <span id="rolltext">not things
+          </div>
+          <a href="#destGlobe" class="ctn">Let's go!</a>
+       </div>
+    </header>
+  <!-- header -->
+  <!--Destinations-->
+  <article class="destGlobe" id="destGlobe">
+    <div id="chartdiv"></div>
+  </article>
+  <!--Destinations-->
+
+  <!-- script -->
+  <script>
+      const menuBtn = document.querySelector('.menu-btn')
+      const navlinks = document.querySelector('.nav-links')
+
+      menuBtn.addEventListener('click', () => {
+         navlinks.classList.toggle('mobile-menu')
+      })
+   </script>
+   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script>
+  // Map Globe
+var root = am5.Root.new("chartdiv");
+
+// Set themes
+// https://www.amcharts.com/docs/v5/concepts/themes/
+root.setThemes([
+  am5themes_Animated.new(root)
+]);
+
+
+// Create the map chart
+// https://www.amcharts.com/docs/v5/charts/map-chart/
+var chart = root.container.children.push(am5map.MapChart.new(root, {
+  panX: "rotateX",
+  panY: "rotateY",
+  projection: am5map.geoOrthographic(),
+  paddingBottom: 20,
+  paddingTop: 20,
+  paddingLeft: 20,
+  paddingRight: 20
+}));
+
+
+// Create main polygon series for countries
+// https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
+var polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
+  geoJSON: am5geodata_worldLow
+}));
+
+polygonSeries.mapPolygons.template.setAll({
+  tooltipText: "{name}",
+  toggleKey: "active",
+  interactive: true
+});
+
+polygonSeries.mapPolygons.template.states.create("hover", {
+  fill: root.interfaceColors.get("primaryButtonHover")
+});
+
+
+// Create series for background fill
+// https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/#Background_polygon
+var backgroundSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {}));
+backgroundSeries.mapPolygons.template.setAll({
+  fill: root.interfaceColors.get("alternativeBackground"),
+  fillOpacity: 0.1,
+  strokeOpacity: 0
+});
+backgroundSeries.data.push({
+  geometry: am5map.getGeoRectangle(90, 180, -90, -180)
+});
+
+
+// Create graticule series
+// https://www.amcharts.com/docs/v5/charts/map-chart/graticule-series/
+var graticuleSeries = chart.series.push(am5map.GraticuleSeries.new(root, {}));
+graticuleSeries.mapLines.template.setAll({ strokeOpacity: 0.1, stroke: root.interfaceColors.get("alternativeBackground") })
+
+
+// Rotate animation
+chart.animate({
+  key: "rotationX",
+  from: 0,
+  to: 360,
+  duration: 30000,
+  loops: Infinity
+});
+
+
+// Make stuff animate on load
+
+</script>
+<!-- <script src="js/script.js"></script> -->
+  <!-- script -->
+
+  </body>
+</html>
