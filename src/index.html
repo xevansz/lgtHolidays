@@ -99,32 +99,24 @@
   <!--Destinations-->
 
   <!-- script -->
-  <script>
-      const menuBtn = document.querySelector('.menu-btn')
-      const navlinks = document.querySelector('.nav-links')
-
-      menuBtn.addEventListener('click', () => {
-         navlinks.classList.toggle('mobile-menu')
-      })
-   </script>
-   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script type="module" src="js/app.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
 <script>
-  // Map Globe
+am5.ready(function() {
+//root element
 var root = am5.Root.new("chartdiv");
 
 // Set themes
-// https://www.amcharts.com/docs/v5/concepts/themes/
 root.setThemes([
   am5themes_Animated.new(root)
 ]);
 
-
-// Create the map chart
-// https://www.amcharts.com/docs/v5/charts/map-chart/
+// map chart
 var chart = root.container.children.push(am5map.MapChart.new(root, {
   panX: "rotateX",
   panY: "rotateY",
@@ -135,9 +127,7 @@ var chart = root.container.children.push(am5map.MapChart.new(root, {
   paddingRight: 20
 }));
 
-
-// Create main polygon series for countries
-// https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
+// main polygon series for countries
 var polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
   geoJSON: am5geodata_worldLow
 }));
@@ -152,9 +142,7 @@ polygonSeries.mapPolygons.template.states.create("hover", {
   fill: root.interfaceColors.get("primaryButtonHover")
 });
 
-
-// Create series for background fill
-// https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/#Background_polygon
+// series for background fill
 var backgroundSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {}));
 backgroundSeries.mapPolygons.template.setAll({
   fill: root.interfaceColors.get("alternativeBackground"),
@@ -165,12 +153,9 @@ backgroundSeries.data.push({
   geometry: am5map.getGeoRectangle(90, 180, -90, -180)
 });
 
-
-// Create graticule series
-// https://www.amcharts.com/docs/v5/charts/map-chart/graticule-series/
+// graticule series
 var graticuleSeries = chart.series.push(am5map.GraticuleSeries.new(root, {}));
 graticuleSeries.mapLines.template.setAll({ strokeOpacity: 0.1, stroke: root.interfaceColors.get("alternativeBackground") })
-
 
 // Rotate animation
 chart.animate({
@@ -181,12 +166,12 @@ chart.animate({
   loops: Infinity
 });
 
-
 // Make stuff animate on load
+chart.appear(1000, 100);
 
+});
 </script>
-<!-- <script src="js/script.js"></script> -->
-  <!-- script -->
+<!-- script -->
 
   </body>
 </html>
