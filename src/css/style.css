@@ -71,7 +71,7 @@ span {
    margin: 0 auto;
 }
 
-/* Moments text animation */
+/* Moments text animation
 .main{
    height:25vh;
    width:100%;  
@@ -87,8 +87,7 @@ span {
  h1{
    text-align: center;
    text-transform: uppercase;
-   color: #b6daf9cf; 
-   font-size: 3rem;
+   color: #df4283c5;
  }
  
  .roller{
@@ -103,17 +102,7 @@ span {
    
    color: #00cc77;
  }
- 
- 
- #spare-time{
-   font-size: 1rem;
-   font-style: italic;
-   letter-spacing: 1rem;
-   margin-top: 0;
-   color: #A8DADC;
-   
- }
- 
+
  .roller #rolltext {
    position: absolute;
    top: 0;
@@ -121,22 +110,28 @@ span {
  }
  
  @keyframes slide {
-   0%{
-     top:0;
-   }
+  0% {
+    top: 0rem;
+  }
+  7.5% {
+   top: -1rem;
+  }
    12.5%{
-      top: -3rem;
+      top: -2rem;
    }
-   25%{
+   17.5% {
+    top: -3rem;
+   }
+   22.5%{
      top: -4rem;    
    }
    37.5% {
       top: -6rem;
    }
-   50%{
-     top: -8rem;
+   42.5% {
+    top: -8rem;
    }
- }
+ } */
 
 
 /* Navbar */
@@ -295,7 +290,7 @@ header {
    text-align: center;
    z-index: 1;
    padding: 4rem;
-   margin-bottom: 150px;
+   margin-bottom: 100px;
 }
 
 .header-content a {
@@ -310,7 +305,7 @@ header {
    width: 150px;
    height: 4px;
    background: #fc036b;
-   margin: 10px auto;
+   margin: 20px auto;
    border-radius: 5px;
    transform-origin:left;
    animation:2.5s in-out forwards infinite;
@@ -359,7 +354,7 @@ header {
    font-size: 2em;
    letter-spacing: 4px;
    overflow: hidden;
-   background: linear-gradient(45deg, #fc036b, #fff, #41031d);
+   background: linear-gradient(45deg, #fc036b, #fff, #df4284);
    background-repeat: repeat;
    background-size: 80%;
    animation: animate 6s linear infinite;
