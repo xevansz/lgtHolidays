@@ -245,29 +245,19 @@ span {
    width: 0px;
    font-weight: 500;
    font-size: 16px;
-   transition: 0.8s;
+   transition: 0.7s;
 }
 
 .search-container .search-btn .fas {
    color: #5cbdbb;
 }
-
-@keyframes hoverShake {
-   0% {
-      transform: skew(0deg, 0deg);
-   }
-
-   25% {
-      transform: skew(5deg, 5deg);
-   }
-
-   75% {
-      transform: skew(-5deg, -5deg);
-   }
-
-   100% {
-      transform: skew(0deg, 0deg);
-   }
+.menu-btn {
+   position: absolute;
+   top: 30px;
+   right: 30px;
+   width: 40px;
+   cursor: pointer;
+   display: none;
 }
 
 /* header */
@@ -290,7 +280,7 @@ header {
    text-align: center;
    z-index: 1;
    padding: 4rem;
-   margin-bottom: 100px;
+   margin-bottom: 130px;
 }
 
 .header-content a {
@@ -305,7 +295,7 @@ header {
    width: 150px;
    height: 4px;
    background: #fc036b;
-   margin: 20px auto;
+   margin: 15px auto;
    border-radius: 5px;
    transform-origin:left;
    animation:2.5s in-out forwards infinite;
@@ -336,15 +326,6 @@ header {
    background: #fc036b;
    border-radius: 30px;
    color: whitesmoke;
-}
-
-.menu-btn {
-   position: absolute;
-   top: 30px;
-   right: 30px;
-   width: 40px;
-   cursor: pointer;
-   display: none;
 }
 
 #quote {
@@ -397,4 +378,54 @@ section {
   display:flex;
   align-items:center;
   justify-content:center;
+}
+
+
+/* footer */
+.footer {
+   width: 100%;
+   min-height: 100px;
+   padding: 20px 80px;
+   margin: 0;
+   background: #222;
+   text-align: center;
+}
+.footer p {
+   color: whitesmoke;
+   margin: 20px auto;
+   padding: 20px auto;
+}
+
+.footer span {
+   display: block;
+   color: whitesmoke;
+   padding: 20px auto;
+}
+
+.social {
+   width: 360px;
+   margin: 30px auto;
+}
+
+.social li {
+   list-style: none;
+}
+
+.social a {
+   margin-right: 10px;
+   font-size: 18px;
+   background-color: transparent;
+   border-radius: 50%;
+   padding: 5px 8px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social a:hover {
+   background-color: #fc036b;
+}
+
+.social i {
+   display: inline;
+   text-align: center;
+   color: whitesmoke;
 }
