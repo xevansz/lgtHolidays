@@ -453,8 +453,5 @@ section {
    padding: 50px 40px;
    margin: 0;
    background: #222222c7;
-}
-
-.footer h1 {
-   color: #ffffffd9;
+   font-size: 16px;
 }

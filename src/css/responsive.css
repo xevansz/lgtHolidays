@@ -1,5 +1,4 @@
-/* Roll out text responsive css */
-@media screen and (max-width: 600px){
+/* @media screen and (max-width: 600px){
   .moments{
   text-align:center;
   text-transform: uppercase;
@@ -35,4 +34,4 @@
     top: -6.375rem;
   }
 }
-}
+} */
