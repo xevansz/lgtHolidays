@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-body{
-	line-height: 1.5;
-	font-family: 'Poppins', sans-serif;
-}
 *{
 	margin:0;
 	padding:0;
@@ -10,6 +6,8 @@ body{
 }
 .container{
 	max-width: 1170px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
 	margin:auto;
 }
 .row{
@@ -26,6 +24,16 @@ ul{
 .footer-col{
    width: 25%;
    padding: 0 15px;
+}
+.footer-col a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
 }
 .footer-col h4{
 	font-size: 18px;
