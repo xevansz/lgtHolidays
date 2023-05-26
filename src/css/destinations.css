@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
+
+.pad {
+  margin-top: 10px;
+  color: ivory;
+  padding: 10px;
+  justify-content: center;
+  background-color: #138496;
+  border-color: #117a8b;
+  border-radius: 10px;
+}
+.mar {
+  margin: 0px;
+}
+
+.for_end {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
