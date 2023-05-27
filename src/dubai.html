@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>carousal</title>
-    <link rel="stylesheet" href="detailinfo.css" />
+    <link rel="stylesheet" href="css/destinations.css" />
+    <link rel="stylesheet" href="css/nav.css">
+    <link
+    href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -29,6 +34,36 @@
       crossorigin="anonymous"
     />
   </head>
+  <!--nav bar-->
+  <nav class="navbar glass" style="height: 70px">
+    <span style="padding-top: 40px"
+      ><a href="#home"
+        ><img class="img2" src="assets/logo.png" style="margin: -45px -40px" />
+        <h1 class="logo">LGT Holidays</h1>
+      </a></span
+    >
+    <ul class="nav-links">
+      <li><a href="#home" id="pri" class="active cir_border">Home</a></li>
+      <li><a href="#dest" id="sec" class="cir_border">Destinations</a></li>
+      <li>
+        <a href="#contribution" id="quint" class="cir_border">Our Company</a>
+      </li>
+      <li><a href="#about" id="quad" class="cir_border">About</a></li>
+      <div class="search-container">
+        <input
+          type="text"
+          name="search"
+          placeholder=" find your dream destination..."
+          class="search-input"
+        />
+        <a href="#" class="search-btn">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+    </ul>
+    <img src="assets/menu-btn.png" alt="" class="menu-btn" />
+  </nav>
+  <!--nav bar-->
   <body>
     <section
       class="md:flex gap-6 min-h-screen items-center py-10 px-8 lg:container mx-auto xl:px-24"
