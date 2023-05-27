@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <title>MAHI</title>
+    <link rel="stylesheet" href="css/Card.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar glass" style="height: 70px">
+      <span style="padding-top: 40px"
+        ><a href="#home"
+          ><img
+            class="img2"
+            src="assets/logo.png"
+            style="margin: -45px -40px"
+          />
+          <h1 class="logo">LGT Holidays</h1>
+        </a></span
+      >
+      <ul class="nav-links">
+        <li><a href="#home" id="pri" class="active cir_border">Home</a></li>
+        <li><a href="#dest" id="sec" class="cir_border">Destinations</a></li>
+        <li>
+          <a href="#contribution" id="quint" class="cir_border">Our Company</a>
+        </li>
+        <li><a href="#about" id="quad" class="cir_border">About</a></li>
+        <div class="search-container">
+          <input
+            type="text"
+            name="search"
+            placeholder=" find your dream destination..."
+            class="search-input"
+          />
+          <a href="#" class="search-btn">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+      </ul>
+      <img src="assets/menu-btn.png" alt="" class="menu-btn" />
+    </nav>
+    <!-- navbar -->
+
+    <section>
+      <h1 class="headingH1">
+        Famous Destinations
+        <hr />
+      </h1>
+      <div class="cardFam">
+        <div class="cardFam-img" id="marin"></div>
+        <div class="cardFam-discription">
+          <h1 id="visit-header">BALI</h1>
+
+          <p>
+            Just north of San Francisco and in driving distance of Napa, Marin
+            is the nature part of life everyone has been missing. From its
+            rolling hills, to its redwood tree forests; Marin is home to
+            unforgettable hikes and panoramic views. Popular spots are Muir
+            Woods National Monument, Mount Tamalpais State Park, and Bolinas
+            Ridge.
+          </p>
+        </div>
+        <button type="button" id="booknowbtn">
+          <a
+            href="https://www.tripadvisor.com/Tourism-g155988-Marin_County_California-Vacations.html"
+          >
+            View more information
+          </a>
+        </button>
+      </div>
+      <div class="cardFam">
+        <div class="cardFam-img" id="yosemite"></div>
+        <div class="cardFam-discription">
+          <h1 id="visit-header">SINGAPORE & BATAM</h1>
+
+          <p>
+            Yosemite is a jaw dropping National Park, hidden away in
+            California’s Sierra Nevada mountains. It’s famed for its giant
+            ancient sequoia trees and iconic vistas. After a long day hiking
+            Bridalveil Fall, El Capitan, or Half Dome; you can wind down at
+            Yosemite Village which has shops, restaurants, lodging.
+          </p>
+        </div>
+        <button type="button" id="booknowbtn">
+          <a
+            href="https://www.tripadvisor.com/Attraction_Review-g61000-d489919-Reviews-Yosemite_Valley-Yosemite_National_Park_California.html"
+          >
+            View more information
+          </a>
+        </button>
+      </div>
+      <div class="cardFam">
+        <div class="cardFam-img" id="sb"></div>
+        <div class="cardFam-discription">
+          <h1 id="visit-header">THAILAND</h1>
+
+          <p>
+            Santa Barbara is a city on the central California coast, with the
+            Santa Ynez Mountains as dramatic backdrop. Downtown,
+            Mediterranean-style white stucco buildings with red-tile roofs
+            reflect the city’s Spanish colonial heritage. Upscale boutiques and
+            restaurants offering local wines and seasonal fare line State
+            Street.
+          </p>
+        </div>
+        <button id="booknowbtn">
+          <a
+            href="https://www.tripadvisor.com/Tourism-g33045-Santa_Barbara_California-Vacations.html"
+          >
+            View more information
+          </a>
+        </button>
+      </div>
+      <div class="cardFam">
+        <div class="cardFam-img"></div>
+        <div class="cardFam-discription">
+          <h1 id="visit-header">HONG KONG</h1>
+          <p>
+            Austin is the state capital of Texas, an inland city bordering the
+            Hill Country region. Home to the famous 6th Street bar scene, Austin
+            is known for its eclectic live-music scene centered around country,
+            blues, and rock. Its many parks and lakes are popular for hiking,
+            biking, swimming and boating.
+          </p>
+        </div>
+        <button id="booknowbtn">
+          <a href=""> View more information </a>
+        </button>
+      </div>
+    </section>
+    <div class="root">
+      <div class="flex-container">
+        <ul class="cards">
+          <li>
+            <a href="bali.html" class="card">
+              <img src="assets/nature.jpg" class="card__image" alt="" />
+              <div class="card__overlay">
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                    <path />
+                  </svg>
+                  <img class="card__thumb" src="assets/1.jpg" alt="" />
+                  <div class="card__header-text">
+                    <h3 class="card__title">BALI</h3>
+                    <h3 class="card__status">Price : ₹20500</h3>
+                  </div>
+                </div>
+                <p class="card__description">
+                  Bali may be small in size – you can drive around the entire
+                  coast in one long day – but its prominence as a destinat…
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="" class="card">
+              <img src="assets/mala.jpg" class="card__image" alt="" />
+              <div class="card__overlay">
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                    <path />
+                  </svg>
+                  <img
+                    class="card__thumb"
+                    src="https://w0.peakpx.com/wallpaper/472/471/HD-wallpaper-kuala-lumpur-sunset-skyscrapers-highway-modern-buildings-park-malaysia.jpg"
+                    alt=""
+                  />
+                  <div class="card__header-text">
+                    <h3 class="card__title">MALAYSIA</h3>
+                    <h3 class="card__status">Price : ₹10600</h3>
+                  </div>
+                </div>
+                <p class="card__description">
+                  Whether it’s the Rainforest, World Music Festival, Hari Raya
+                  or the F1 Petronas Malaysia Grand Prix, Malaysia is packed
+                  with magical moments worth celebrating.
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="" class="card">
+              <img src="assets/singapore (2).jpg" class="card__image" alt="" />
+              <div class="card__overlay">
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                    <path />
+                  </svg>
+                  <img
+                    class="card__thumb"
+                    src="https://wallpaper.dog/large/10821962.jpg"
+                    alt=""
+                  />
+                  <div class="card__header-text">
+                    <h3 class="card__title">SINGAPORE</h3>
+                    <h3 class="card__status">Price : ₹18300</h3>
+                  </div>
+                </div>
+                <p class="card__description">
+                  A visit to Singapore need not be expensive. With a wide range
+                  of value for money Singapore Tour Packages with us, you don’t
+                  have to worry about burning a hole in your pocket.
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex-container">
+        <ul class="cards">
+          <li>
+            <a href="" class="card">
+              <img
+                src="https://images.pexels.com/photos/3732494/pexels-photo-3732494.jpeg"
+                class="card__image"
+                alt=""
+              />
+              <div class="card__overlay">
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                    <path />
+                  </svg>
+                  <img
+                    class="card__thumb"
+                    src="https://c0.wallpaperflare.com/preview/74/724/865/ocean-sea-outdoors-land.jpg"
+                    alt=""
+                  />
+                  <div class="card__header-text">
+                    <h3 class="card__title">THAILAND</h3>
+                    <h3 class="card__status">Price : ₹10450</h3>
+                  </div>
+                </div>
+                <p class="card__description">
+                  Welcome to the Amazing Thailand! Our Wonderful Thailand Tour
+                  Package is a perfect blend of leisure and culture that makes
+                  this tour really unique.
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="" class="card">
+              <img
+                src="https://media.cntraveler.com/photos/5fdbcd5d770915229e50406a/1:1/w_1600,h_1600,c_limit/_DSC0557_a.jpg"
+                class="card__image"
+                alt=""
+              />
+              <div class="card__overlay">
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                    <path />
+                  </svg>
+                  <img class="card__thumb" src="assets/hongkong.png" />
+                  <div class="card__header-text">
+                    <h3 class="card__title">HONG KONG</h3>
+                    <h3 class="card__status">Price : ₹55000</h3>
+                  </div>
+                </div>
+                <p class="card__description">
+                  On Arrival at Hong Kong International Airport. Our Local
+                  representative will be waiting outside the customs area to
+                  welcome you and transfer you to your …
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="china.html" class="card">
+              <img
+                src="https://wallpaperaccess.com/full/33929.jpg"
+                class="card__image"
+                alt=""
+              />
+              <div class="card__overlay">
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                    <path />
+                  </svg>
+                  <img
+                    class="card__thumb"
+                    src="https://images.pexels.com/photos/3204950/pexels-photo-3204950.jpeg?cs=srgb&dl=pexels-ruiyang-zhang-3204950.jpg&fm=jpg"
+                    alt=""
+                  />
+                  <div class="card__header-text">
+                    <h3 class="card__title">CHINA</h3>
+                    <h3 class="card__status">Price : ₹43100</h3>
+                  </div>
+                </div>
+                <p class="card__description">
+                  Travel selectively around China and you can quickly tap into a
+                  rich seam of antiquity: ponder the legends and … Most
+                  international holiday packages of …
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex-container">
+        <ul class="cards">
+          <li>
+            <a href="" class="card">
+              <img
+                src="https://www.watg.com/wp-content/uploads/2017/07/Nuvasa-Bay-Master-Plan-Batam-Indonesia-WATG-Perspective-1230x640.jpg"
+                class="card__image"
+                alt=""
+              />
+              <div class="card__overlay">
+                <div class="card__header">
+                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                    <path />
+                  </svg>
+                  <img
+                    class="card__thumb"
+                    src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revision-2019/all-revision-destination/sumatra/Batam.jpg"
+                    alt=""
+                  />
+                  <div class="card__header-text">
+                    <h3 class="card__title">SINGAPORE & BATAM</h3>
+                    <h3 class="card__status">Price : ₹26990</h3>
+                  </div>
+                </div>
+                <p class="card__description">
+                  A visit to Singapore need not be expensive. With a wide range
+                  of value for money Singapore Tour Packages with us, you don’t
+                  have t…
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
