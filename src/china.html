@@ -40,33 +40,45 @@
     />
   </head>
     <!--nav bar-->
-    <nav class="navbar glass" style="height: 70px">
-      <span style="padding-top: 40px"
-        ><a href="#home"
-          ><img class="img2" src="assets/logo.png" style="margin: -45px -40px" />
-          <h1 class="logo">LGT Holidays</h1>
-        </a></span
-      >
-      <ul class="nav-links">
-        <li><a href="#home" id="pri" class="active cir_border">Home</a></li>
-        <li><a href="#dest" id="sec" class="cir_border">Destinations</a></li>
-        <li>
-          <a href="#contribution" id="quint" class="cir_border">Our Company</a>
-        </li>
-        <li><a href="#about" id="quad" class="cir_border">About</a></li>
-        <div class="search-container">
-          <input
-            type="text"
-            name="search"
-            placeholder=" find your dream destination..."
-            class="search-input"
-          />
-          <a href="#" class="search-btn">
-            <i class="fas fa-search"></i>
-          </a>
+    <nav class="navbar glass" role="navigation" aria-label="Main Navigation">
+      <div class="navbar-inner">
+        <a href="#home" class="navbar-logo" aria-label="LGT Holidays Home">
+          <img class="img2" src="assets/logo.png" alt="LGT Holidays logo" />
+          <span class="logo">LGT Holidays</span>
+        </a>
+        <ul class="navbar-links">
+          <li><a href="#home" id="pri" class="active cir_border">Home</a></li>
+          <li class="dropdown">
+            <button class="dropdown-toggle cir_border" aria-expanded="false" aria-controls="dest-dropdown">Destinations <span aria-hidden="true">▼</span></button>
+            <ul class="dropdown-menu" id="dest-dropdown" aria-label="Destinations" hidden>
+              <li><a href="bali.html">Bali</a></li>
+              <li><a href="china.html">China</a></li>
+              <li><a href="dubai.html">Dubai</a></li>
+              <li><a href="#">Thailand</a></li>
+            </ul>
+          </li>
+          <li><a href="#contribution" id="quint" class="cir_border">Our Company</a></li>
+          <li><a href="#about" id="quad" class="cir_border">About</a></li>
+        </ul>
+        <div class="navbar-search">
+          <form action="#" role="search" aria-label="Site Search" autocomplete="off">
+            <div class="search-container">
+              <input
+                type="text"
+                name="search"
+                placeholder="Find your dream destination..."
+                class="search-input"
+                aria-label="Search destinations"
+                autocomplete="off"
+              />
+              <button type="submit" class="search-btn" aria-label="Search">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+          <a href="#book" class="navbar-cta">Book Now</a>
         </div>
-      </ul>
-      <img src="assets/menu-btn.png" alt="" class="menu-btn" />
+      </div>
     </nav>
     <!--nav bar-->
   <body>

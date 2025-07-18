@@ -1,59 +1,15 @@
-/* @media screen and (max-width: 600px){
-  .moments{
-  text-align:center;
-  text-transform: uppercase;
-  color: #F1FAEE; 
-  font-size: 2.125rem;
-}
-  
-  .roller{
-  height: 2.6rem; 
-  line-height: 2.125rem;  
+/* Only keep laptop/desktop responsive styles */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  
-  #spare-time {
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
+  .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  
-  .roller #rolltext {  
-  animation: slide-mob 5s infinite;  
-}
-  
-  @keyframes slide-mob {
-  0%{
-    top:0;
+  .destGlobe, .flexround {
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  25%{
-    top: -2.125rem;    
-  }
-  50%{
-    top: -4.25rem;
-  }
-  72.5%{
-    top: -6.375rem;
-  }
-}
-} */
-
- 
-@media (max-width: 880px) {
- 
-  .footer-distributed{
-     font: bold 14px sans-serif;
-  }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right{
-     display: block;
-     width: 100%;
-     margin-bottom: 40px;
-     text-align: center;
-  }
-
-  .footer-distributed .footer-center i{
-     margin-left: 0;
-  }
-
 }

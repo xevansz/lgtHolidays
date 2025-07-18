@@ -32,11 +32,6 @@
       href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
     <link rel="icon" href="assets/logo.jpg" type="image/jpg" />
     <link rel="shortcut icon" href="assets/logo.png" />
     <link
@@ -46,192 +41,168 @@
     />
   </head>
   <body>
-    <nav class="navbar glass" style="height: 70px">
-      <span style="padding-top: 40px"
-        ><a href="#home"
-          ><img
-            class="img2"
-            src="assets/logo.png"
-            style="margin: -45px -40px"
-          />
-          <h1 class="logo">LGT Holidays</h1>
-        </a></span
-      >
-      <ul class="nav-links">
+    <nav class="navbar glass" role="navigation" aria-label="Main Navigation">
+      <div class="navbar-inner">
+        <a href="#home" class="navbar-logo" aria-label="LGT Holidays Home">
+          <img class="img2" src="assets/logo.png" alt="LGT Holidays logo" />
+          <span class="logo">LGT Holidays</span>
+        </a>
+        <ul class="navbar-links">
         <li><a href="#home" id="pri" class="active cir_border">Home</a></li>
-        <li><a href="#dest" id="sec" class="cir_border">Destinations</a></li>
-        <li>
-          <a href="#contribution" id="quint" class="cir_border">Our Company</a>
+          <li class="dropdown">
+            <button class="dropdown-toggle cir_border" aria-expanded="false" aria-controls="dest-dropdown">Destinations <span aria-hidden="true">▼</span></button>
+            <ul class="dropdown-menu" id="dest-dropdown" aria-label="Destinations" hidden>
+              <li><a href="bali.html">Bali</a></li>
+              <li><a href="china.html">China</a></li>
+              <li><a href="dubai.html">Dubai</a></li>
+              <li><a href="#">Thailand</a></li>
+            </ul>
         </li>
+          <li><a href="#contribution" id="quint" class="cir_border">Our Company</a></li>
         <li><a href="#about" id="quad" class="cir_border">About</a></li>
+        </ul>
+        <div class="navbar-search">
+          <form action="#" role="search" aria-label="Site Search" autocomplete="off">
         <div class="search-container">
           <input
             type="text"
             name="search"
-            placeholder=" find your dream destination..."
+                placeholder="Find your dream destination..."
             class="search-input"
+                aria-label="Search destinations"
+                autocomplete="off"
           />
-          <a href="#" class="search-btn">
+              <button type="submit" class="search-btn" aria-label="Search">
             <i class="fas fa-search"></i>
-          </a>
+              </button>
+            </div>
+          </form>
+          <a href="#book" class="navbar-cta">Book Now</a>
         </div>
-      </ul>
-      <img src="assets/menu-btn.png" alt="" class="menu-btn" />
+      </div>
     </nav>
+    <div class="nav-overlay" tabindex="-1" aria-hidden="true"></div>
 
     <!-- header -->
     <header id="home">
       <div class="header-content">
-        <h2 id="quote">Zoom the World around!</h2>
+        <h1 id="main-heading">Zoom the World around!</h1>
         <div class="line"></div>
-        <!-- <div class="main">
-             <h1 style="font-size: 3rem;"> Collect Moments
-              <div class="roller">
-               <span id="rolltext">not things
-          </div> -->
         <a href="#destGlobe" class="ctn">Let's go!</a>
       </div>
     </header>
     <!-- header -->
 
     <!--Destinations-->
-    <div class="con">
-      <article class="destGlobe" id="destGlobe">
-        <div class="flexround">
-          <div class="card">
-            <div class="imgBox">
-              <img
-                src="https://images.unsplash.com/photo-1473167052083-3d31fa1f6776?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU4ODl8&ixlib=rb-4.0.3&q=85"
-                alt="New York Photo"
-              />
-              <div class="img-blur">
-                <a href="#">Explore ></a>
-              </div>
-            </div>
-            <h2 class="title">
-              <a>ALL LOCATIONS</a>
-            </h2>
-          </div>
-          <div class="card">
-            <div class="imgBox">
-              <img
-                src="https://images.unsplash.com/photo-1473167052083-3d31fa1f6776?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU4ODl8&ixlib=rb-4.0.3&q=85"
-                alt="New York Photo"
-              />
-              <div class="img-blur">
-                <a href="#">Explore ></a>
-              </div>
-            </div>
-            <h2 class="title">
-              <a>AFRICA</a>
-            </h2>
-          </div>
-          <div class="card">
-            <div class="imgBox">
-              <img
-                src="https://images.unsplash.com/photo-1604604994333-f1b0e9471186?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU5NzR8&ixlib=rb-4.0.3&q=85"
-                alt="New York Photo"
-              />
-              <div class="img-blur">
-                <a href="#">Explore ></a>
-              </div>
-            </div>
-            <h2 class="title">
-              <a>EUROPE</a>
-            </h2>
-          </div>
-        </div>
-        <div class="flexround">
-          <div class="card">
-            <div class="imgBox">
-              <img
-                src="https://images.unsplash.com/photo-1473167052083-3d31fa1f6776?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU4ODl8&ixlib=rb-4.0.3&q=85"
-                alt="New York Photo"
-              />
-              <div class="img-blur">
-                <a href="#">Explore ></a>
-              </div>
-            </div>
-            <h2 class="title">
-              <a>AUSTRALIA</a>
-            </h2>
-          </div>
-          <div class="card">
-            <div class="imgBox">
-              <img
-                src="https://images.unsplash.com/photo-1473167052083-3d31fa1f6776?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU4ODl8&ixlib=rb-4.0.3&q=85"
-                alt="New York Photo"
-              />
-              <div class="img-blur">
-                <a href="#">Explore ></a>
-              </div>
-            </div>
-            <h2 class="title">
-              <a>AMERICAS</a>
-            </h2>
-          </div>
-          <div class="card">
-            <div class="imgBox">
-              <img
-                src="https://images.unsplash.com/photo-1604604994333-f1b0e9471186?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU5NzR8&ixlib=rb-4.0.3&q=85"
-                alt="New York Photo"
-              />
-              <div class="img-blur">
-                <a href="#">Explore ></a>
-              </div>
-            </div>
-            <h2 class="title">
-              <a>MIDDLE EAST</a>
-            </h2>
-          </div>
-        </div>
-        <div class="flexround">
-          <div class="card">
-            <div class="imgBox">
-              <img
-                src="https://images.unsplash.com/photo-1604604994333-f1b0e9471186?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU5NzR8&ixlib=rb-4.0.3&q=85"
-                alt="New York Photo"
-              />
-              <div class="img-blur">
-                <a href="#">Explore ></a>
-              </div>
-            </div>
-            <h2 class="title">
-              <a>INDIAN OCEAN</a>
-            </h2>
-          </div>
-          <div class="card">
-            <div class="imgBox">
-              <img
-                src="https://images.unsplash.com/photo-1604604994333-f1b0e9471186?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU5NzR8&ixlib=rb-4.0.3&q=85"
-                alt="New York Photo"
-              />
-              <div class="img-blur">
-                <a href="#">Explore ></a>
-              </div>
-            </div>
-            <h2 class="title">
-              <a>INDIA</a>
-            </h2>
-          </div>
-          <div class="card">
-            <div class="imgBox">
-              <img
-                src="https://images.unsplash.com/photo-1604604994333-f1b0e9471186?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU5NzR8&ixlib=rb-4.0.3&q=85"
-                alt="New York Photo"
-              />
-              <div class="img-blur">
-                <a href="#">Explore ></a>
-              </div>
-            </div>
-            <h2 class="title">
-              <a>ASIA</a>
-            </h2>
-          </div>
-        </div>
+    <main class="con">
+      <section class="destGlobe" id="destGlobe">
         <div id="chartdiv"></div>
-      </article>
-    </div>
+        <div class="flexround">
+          <div class="card">
+            <div class="imgBox">
+              <img
+                src="https://images.unsplash.com/photo-1473167052083-3d31fa1f6776?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU4ODl8&ixlib=rb-4.0.3&q=85"
+                alt="Aerial view of New York City skyline"
+              />
+              <div class="img-blur">
+                <a href="#">Explore all locations worldwide</a>
+              </div>
+            </div>
+            <h2 class="title">
+              <span>ALL LOCATIONS</span>
+            </h2>
+          </div>
+          <div class="card">
+            <div class="imgBox">
+              <img
+                src="https://images.unsplash.com/photo-1473167052083-3d31fa1f6776?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU4ODl8&ixlib=rb-4.0.3&q=85"
+                alt="African landscape with wildlife"
+              />
+              <div class="img-blur">
+                <a href="#">Explore destinations in Africa</a>
+              </div>
+            </div>
+            <h2 class="title">
+              <span>AFRICA</span>
+            </h2>
+          </div>
+          <div class="card">
+            <div class="imgBox">
+              <img
+                src="https://images.unsplash.com/photo-1604604994333-f1b0e9471186?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU5NzR8&ixlib=rb-4.0.3&q=85"
+                alt="European cityscape with historic buildings"
+              />
+              <div class="img-blur">
+                <a href="#">Explore destinations in Europe</a>
+              </div>
+            </div>
+            <h2 class="title">
+              <span>EUROPE</span>
+            </h2>
+          </div>
+        </div>
+        <div class="flexround">
+          <div class="card">
+            <div class="imgBox">
+              <img
+                src="https://images.unsplash.com/photo-1473167052083-3d31fa1f6776?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU4ODl8&ixlib=rb-4.0.3&q=85"
+                alt="Australian outback with kangaroos"
+              />
+              <div class="img-blur">
+                <a href="#">Explore destinations in Australia</a>
+              </div>
+            </div>
+            <h2 class="title">
+              <span>AUSTRALIA</span>
+            </h2>
+          </div>
+          <div class="card">
+            <div class="imgBox">
+              <img
+                src="https://images.unsplash.com/photo-1473167052083-3d31fa1f6776?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU4ODl8&ixlib=rb-4.0.3&q=85"
+                alt="American city skyline with skyscrapers"
+              />
+              <div class="img-blur">
+                <a href="#">Explore destinations in the Americas</a>
+              </div>
+            </div>
+            <h2 class="title">
+              <span>AMERICAS</span>
+            </h2>
+          </div>
+          <div class="card">
+            <div class="imgBox">
+              <img
+                src="https://images.unsplash.com/photo-1604604994333-f1b0e9471186?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU5NzR8&ixlib=rb-4.0.3&q=85"
+                alt="Middle Eastern desert with camels"
+              />
+              <div class="img-blur">
+                <a href="#">Explore destinations in the Middle East</a>
+              </div>
+            </div>
+            <h2 class="title">
+              <span>MIDDLE EAST</span>
+            </h2>
+          </div>
+        </div>
+        <div class="flexround">
+          <div class="card">
+            <div class="imgBox">
+              <img
+                src="https://images.unsplash.com/photo-1604604994333-f1b0e9471186?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQwNzU5NzR8&ixlib=rb-4.0.3&q=85"
+                alt="Indian Ocean beach with palm trees"
+              />
+              <div class="img-blur">
+                <a href="#">Explore destinations in the Indian Ocean</a>
+              </div>
+            </div>
+            <h2 class="title">
+              <span>INDIAN OCEAN</span>
+            </h2>
+          </div>
+        </div>
+      </section>
+    </main>
     <!--Destinations-->
 
     <!--footer-->
@@ -294,11 +265,11 @@
       src="https://code.jquery.com/jquery-3.6.0.js"
     ></script>
     <script type="module" src="js/app.js"></script>
-    <script src="js/globe.js"></script>
+    <!-- Remove local globe.js, use CDN only -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-
     <script>
       am5.ready(function () {
         //root element
@@ -367,9 +338,6 @@
           duration: 30000,
           loops: Infinity,
         });
-
-        // Make stuff animate on load
-        chart.appear(1000, 100);
       });
     </script>
     <!-- script -->
