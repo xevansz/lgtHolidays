@@ -84,30 +84,6 @@ npm start
 - **Geographic categorization** (Africa, Europe, Americas, etc.)
 - **Consistent styling** across all destination pages
 
-## 🔧 Customization
-
-### Adding New Destinations
-1. Create a new HTML file in the `src/` directory
-2. Copy the navbar structure from `index.html`
-3. Add the destination to the dropdown menu in all HTML files
-4. Update the navigation links accordingly
-
-### Styling Modifications
-- Main styles are in `src/css/style.css`
-- Navigation-specific styles are in `src/css/nav.css`
-- Responsive design rules are in `src/css/responsive.css`
-
-### JavaScript Functionality
-- Main interactive features are in `src/js/app.js`
-- Globe configuration is inline in `index.html`
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
 ## 🤝 Contributing
 
 This is a design portfolio project. Feel free to fork and modify for your own use.
